@@ -102,9 +102,28 @@ html {
     0% { transform: translateY(0); opacity: 0.4; }
     100% { transform: translateY(0.4em); opacity: 0.9; }
 }
+
 @media (max-width: 456px) {
     .conteudo-principal .paineis {
         height: 500px;
+    }
+
+    .paineis h1 {
+        font-size: 25px;
+        padding-top: 2px;
+    }
+    .paineis p {
+        padding-top: 45px;
+    }
+}
+
+@media (min-width: 524px) and (max-width: 648px) {
+    .paineis h1 {
+        padding-bottom: 35px;
+    }
+
+    .paineis p {
+        padding-top: 18px;
     }
 }
 .conteudo-principal .paineis .imagem-painel {
