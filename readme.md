@@ -4,6 +4,7 @@ Bem-vindo(a) ao repositório da **Tecvora**!
 
 > ⚠️ Aviso: Essa startup é **totalmente fictícia**, criada apenas como projeto criativo e de portfólio.  
 
+![Preview do site](src/imagens/responsive.png)
 ---
 
 ## 🌐 Sobre a Tecvora  
