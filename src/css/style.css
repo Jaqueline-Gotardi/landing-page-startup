@@ -1,117 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Base */
 body {
-    font-family: 'Public sans', sans-serif;
+    font-family: 'Public Sans', sans-serif;
 }
-
 img {
     max-width: 100%;
-} 
-
+}
 a {
     text-decoration: none;
 }
-
 ul {
     list-style: none;
 }
-
 html {
     scroll-behavior: smooth;
 }
 
-/* LOGO */
-.logo .imagem {
-    display: flex;
-    width: 115px;
-    margin: 0px 25px;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Logo */
 .logo {
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
 }
-
+.logo .imagem {
+    display: flex;
+    width: 115px;
+    margin: 0 25px;
+    align-items: center;
+    justify-content: center;
+}
 .logo .titulo {
     margin-left: 7px;
     font-size: 17px;
     font-weight: 800;
-    transition: 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
 }
 
-.logo .titulo:hover {
-    color: #1ed760;
-}
-
-/* LOGO */
-
-
-
-/* CABECALHO */
+/* Cabeçalho */
 .cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 0px;
+    padding: 5px 0;
     max-width: 1170px;
     margin: 0 auto;
     flex-wrap: wrap;
-    scroll-behavior: smooth;
 }
-
-@media(max-width: 624px) {
-    /*  .logo .imagem {
-        padding-top: 10px;
-    } */
-
-    .cabecalho {
-        justify-content: center;
-        max-width: 456px;
-        padding: 0px;
-    }
-
-    .cabecalho .logo {
-        margin-bottom: -10px;
-    }
-
-    .navegacao .menu .item a {
-        font-size: calc(0.6em + 1vw);
-    }
-}
-
 .cabecalho .navegacao {
-    padding-top: 0 auto;
+    padding-top: 0;
 }
-
 .cabecalho .navegacao .menu {
     display: flex;
 }
-
 .cabecalho .navegacao .menu .item {
     margin: 10px;
 }
-
 .cabecalho .navegacao .menu .item a {
     padding: 8px;
     color: #070f2e;
-    transition: 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
 }
-
 .cabecalho .navegacao .menu .item a:hover {
     color: rgb(223, 82, 31);
     text-decoration: underline;
     text-underline-offset: 6px;
 }
+@media (max-width: 624px) {
+    .cabecalho {
+        justify-content: center;
+        max-width: 456px;
+        padding: 0;
+    }
+    .cabecalho .logo {
+        margin-bottom: -10px;
+    }
+    .navegacao .menu .item a {
+        font-size: calc(0.6em + 1vw);
+    }
+}
 
-/* CABECALHO */
-
-
-
-/* PAINEL */
+/* Painel */
 .conteudo-principal .paineis {
     display: flex;
     justify-content: center;
@@ -119,37 +89,24 @@ html {
     height: 760px;
     position: relative;
 }
-
 .conteudo-principal .paineis::after {
     content: '';
-    background-image: url('../imagens/seta-branca.png');
+    background: url('../imagens/seta-branca.png') no-repeat center/contain;
     width: 65px;
     height: 65px;
-    background-repeat: no-repeat;
-    background-size: contain;
     position: absolute;
     bottom: 5px;
-    animation: downaroow 0.6s infinite alternate ease-in-out;
+    animation: downarrow 0.6s infinite alternate ease-in-out;
 }
-
-@-webkit-keyframes downaroow {
-    0% {
-        -webkit-transform: translateY(0);
-        opacity: 0.4;
-    }
-
-    100% {
-        -webkit-transform: translateY(0.4em);
-        opacity: 0.9;
-    }
+@keyframes downarrow {
+    0% { transform: translateY(0); opacity: 0.4; }
+    100% { transform: translateY(0.4em); opacity: 0.9; }
 }
-
-@media (max-width:456px) {
+@media (max-width: 456px) {
     .conteudo-principal .paineis {
         height: 500px;
     }
 }
-
 .conteudo-principal .paineis .imagem-painel {
     background-repeat: no-repeat;
     background-size: cover;
@@ -184,8 +141,7 @@ html {
 .conteudo-principal .paineis .titulo {
     color: #fff;
     text-transform: uppercase;
-    font-size: calc(1em + 1vw);
-    /* Tamanho da fonte responsivo */
+    font-size: calc(1em + 1vw); /* Tamanho da fonte responsivo */
 }
 
 .conteudo-principal .paineis .seta {
@@ -213,7 +169,6 @@ html {
     opacity: 0.6;
     cursor: default;
 }
-
 /* PAINEL */
 
 
@@ -302,10 +257,6 @@ html {
     padding: 0 10%;
 }
 
-/* .sobre-nos .conteudo .informacoes {
-    width: 40%;
-} */
-
 .sobre-nos .conteudo .imagem {
     width: 65%;
     padding: 50px;
@@ -338,16 +289,11 @@ html {
         padding: 100px 30px;
     }
 
-    /* .sobre-nos .conteudo .imagem {
-        display: none;
-    } */
-
     .sobre-nos .conteudo .informacoes {
         width: 100%;
         margin-bottom: 40px;
     }
 }
-
 /* SOBRE NÓS */
 
 
@@ -371,12 +317,10 @@ html {
     display: flex;
     flex-direction: column;
     margin: 25px;
-    /* align-items: center; */
 }
 
 .contatos .contato a {
     display: flex;
-    /* flex-direction: row; */
     align-items: center;
 }
 
@@ -408,11 +352,6 @@ html {
     list-style-type: disc;
 }
 
-/* .rodape .redes-sociais {
-    display: flex;
-    flex-direction: column;
-} */
-
 .redes-sociais h2 {
     font-size: 18px;
     color: #111;
@@ -434,7 +373,6 @@ html {
     font-size: 30px;
     border: 2px solid #111;
     border-radius: 50%;
-    /* padding: 15px; */
     width: 50px;
     height: 50px;
     align-items: center;
@@ -447,16 +385,6 @@ html {
     transition: 0.3s ease-in-out;
 }
 
-/* .rodape .navegacao .logo .imagem {
-    width: 100px; 
-}  */
-
-/* .contatos .copyright {
-    margin-top: 70px;
-    text-align: center;
-    color: #0d1811;
-} */
-
 .rodape {
     display: flex;
     flex-direction: row;
@@ -465,7 +393,6 @@ html {
 
 .copyright {
     margin-top: 55px;
-    /* text-align: center; */
     color: #0d1811;
     left: -15px;
     position: relative;
@@ -489,15 +416,6 @@ html {
     .copyright {
         margin: 0 auto;
     }
-
-    /* .contatos .navegacao .logo {
-        margin-bottom: 30px;
-    }
- */
-    /* .contatos .navegacao .logo {
-        width: 100%;
-        justify-content: center;
-    } */
 }
 
 /* RODAPE */
